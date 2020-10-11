@@ -33,4 +33,6 @@
     <string name="medical_Btn">expand It</string>
     <string name="ortext">or</string>
     <string name="Guest_login">I am a Guest !</string>
+    <string name="title_activity_nerceries">Map</string>
+    <string name="title_activity_nurseries">Map</string>
 </resources>
