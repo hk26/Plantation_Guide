@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(8000);
+                    sleep(1000);
                     Intent intent = new Intent(MainActivity.this, SignupActivity.class);
                     startActivity(intent);
                     finish();

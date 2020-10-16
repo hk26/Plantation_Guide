@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nurseries" />
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/B_search"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:onClick="onClick"
+        android:visibility="invisible" />
+    <EditText
+        android:id="@+id/TF_location"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:visibility="invisible"/>
+
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".nurseries" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:isScrollContainer="true"
+        map:fab_addButtonColorNormal="@color/projectgreen"
+        map:fab_addButtonPlusIconColor="@color/darkfgreen"
+        map:fab_addButtonColorPressed="#fff"
+        map:fab_labelStyle="@style/customfab"
+        >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/B_gtool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            map:fab_colorNormal="@color/projectgreen"
+            map:fab_colorPressed="@color/darkfgreen"
+            map:fab_icon="@drawable/ic_gtool"
+            map:fab_size="mini"
+            map:fab_title="Hard Ware shopes"
+
+            />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/B_nurseri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            map:fab_colorNormal="@color/projectgreen"
+            map:fab_colorPressed="@color/darkfgreen"
+            map:fab_icon="@drawable/ic_nurseri"
+            map:fab_size="mini"
+            map:fab_title="nurseries"
+
+            />
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+
+</RelativeLayout>
