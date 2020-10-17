@@ -118,7 +118,10 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onLocationChanged(@NonNull Location location) {
+        latitude = location.getLatitude();
+        longitude = location.getLongitude();
         lastLocation = location;
+
         if(currentLocatioMarker != null){
             currentLocatioMarker.remove();
         }
@@ -146,7 +149,8 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
         GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
 
         switch(v.getId())
-        {     case R.id.B_search:
+        {
+            case R.id.B_search:
             EditText tf_location =  findViewById(R.id.TF_location);
             String location = tf_location.getText().toString();
             List<Address> addressList;
@@ -180,25 +184,25 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
 
             case R.id.B_gtool:
                 mMap.clear();
-                String hardware = "hardware shop";
+                String hardware = "hardware";
                 String url = getUrl(latitude, longitude, hardware);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(nurseries.this, "Showing Nearby Hospitals", Toast.LENGTH_SHORT).show();
+                Toast.makeText(nurseries.this, "Showing Nearby Hardware Shopes.", Toast.LENGTH_SHORT).show();
                 break;
 
 
             case R.id.B_nurseri:
                 mMap.clear();
-                String nurseries = "nueseries";
+                String nurseries = "Nueseries";
                 url = getUrl(latitude, longitude, nurseries);
                 dataTransfer[0] = mMap;
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(nurseries.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+                Toast.makeText(nurseries.this, "Showing Nearby Nurseris", Toast.LENGTH_SHORT).show();
                 break;
 
 

@@ -46,17 +46,18 @@
             android:id="@+id/B_gtool"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             map:fab_colorNormal="@color/projectgreen"
             map:fab_colorPressed="@color/darkfgreen"
             map:fab_icon="@drawable/ic_gtool"
             map:fab_size="mini"
-            map:fab_title="Hard Ware shopes"
+            map:fab_title="Hard Ware shopes" />
 
-            />
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/B_nurseri"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             map:fab_colorNormal="@color/projectgreen"
             map:fab_colorPressed="@color/darkfgreen"
             map:fab_icon="@drawable/ic_nurseri"
