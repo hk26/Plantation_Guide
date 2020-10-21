@@ -70,19 +70,19 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode){
             case REQUEST_LOCATION_CODE:
-               if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                   //permission granted
-                   if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+                if(grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    //permission granted
+                    if(ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
                         if(client == null){
                             buildGoogleApiClient();
                         }
                         mMap.setMyLocationEnabled(true);
-                   }
-               }
-               else{
-                   Toast.makeText(this,"Permission Denied !",Toast.LENGTH_LONG).show();
-               }
-               return;
+                    }
+                }
+                else{
+                    Toast.makeText(this,"Permission Denied !",Toast.LENGTH_LONG).show();
+                }
+
         }
     }
 
@@ -98,7 +98,7 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-           if( ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+        if( ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
@@ -107,12 +107,12 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
 
     protected synchronized void buildGoogleApiClient()
     {
-         client = new GoogleApiClient.Builder(this)
-                 .addConnectionCallbacks(this)
-                 .addOnConnectionFailedListener(this)
-                 .addApi(LocationServices.API)
-                 .build();
-         client.connect();
+        client = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        client.connect();
 
     }
 
@@ -125,6 +125,7 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
         if(currentLocatioMarker != null){
             currentLocatioMarker.remove();
         }
+        Log.d("lat = ",""+latitude);
         LatLng latLng = new LatLng(location.getLatitude(),location.getLongitude());
         MarkerOptions markerOptions =new MarkerOptions();
         markerOptions.position(latLng);
@@ -151,36 +152,39 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
         switch(v.getId())
         {
             case R.id.B_search:
-            EditText tf_location =  findViewById(R.id.TF_location);
-            String location = tf_location.getText().toString();
-            List<Address> addressList;
+                EditText tf_location =  findViewById(R.id.TF_location);
+                String location = tf_location.getText().toString();
+                List<Address> addressList;
 
 
-            if(!location.equals(""))
-            {
-                Geocoder geocoder = new Geocoder(this);
+                if(!location.equals(""))
+                {
+                    Geocoder geocoder = new Geocoder(this);
 
-                try {
-                    addressList = geocoder.getFromLocationName(location, 5);
+                    try {
+                        addressList = geocoder.getFromLocationName(location, 5);
 
-                    if(addressList != null)
-                    {
-                        for(int i = 0;i<addressList.size();i++)
+                        if(addressList != null)
                         {
-                            LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
-                            MarkerOptions markerOptions = new MarkerOptions();
-                            markerOptions.position(latLng);
-                            markerOptions.title(location);
-                            mMap.addMarker(markerOptions);
-                            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                            mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+                            for(int i = 0;i<addressList.size();i++)
+                            {
+                                Address myAddress = addressList.get(i);
+                                latitude = myAddress.getLatitude();
+                                longitude = myAddress.getLongitude();
+                                LatLng latLng = new LatLng(addressList.get(i).getLatitude() , addressList.get(i).getLongitude());
+                                MarkerOptions markerOptions = new MarkerOptions();
+                                markerOptions.position(latLng);
+                                markerOptions.title(location);
+                                mMap.addMarker(markerOptions);
+                                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                                mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+                            }
                         }
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
-            }
-            break;
+                break;
 
             case R.id.B_gtool:
                 mMap.clear();
@@ -211,6 +215,8 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
 
     private String getUrl(double latitude , double longitude , String nearbyPlace)
     {
+        latitude = lastLocation.getLatitude();
+        longitude=lastLocation.getLongitude();
 
         StringBuilder googlePlaceUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlaceUrl.append("location="+latitude+","+longitude);
@@ -254,7 +260,8 @@ public class nurseries extends FragmentActivity implements OnMapReadyCallback,
             }
             return false;
         }
-        return true;
+        else
+            return true;
 
     }
 

@@ -3,10 +3,12 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardBackgroundColor="http://schemas.android.com/tools"
     app:cardCornerRadius="20dp"
     app:contentPadding="10dp"
     app:cardUseCompatPadding="true"
     app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/colorPrimaryDark"
     >
      <LinearLayout
          android:layout_width="wrap_content"
@@ -32,7 +34,7 @@
                  android:layout_height="wrap_content"
                  android:text="title"
                  android:textAlignment="center"
-                 android:textColor="@color/colorPrimaryDark"
+                 android:textColor="@color/darkfgreen"
                  android:textSize="25sp" />
          </LinearLayout>
      </LinearLayout>

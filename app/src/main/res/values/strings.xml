@@ -5,7 +5,7 @@
     <string name="sign_email">Email</string>
     <string name="sign_password">PassWord</string>
     <string name="usrname">Name</string>
-    <string name="asklogin">LogIn</string>
+    <string name="asklogin"><u>LogIn</u></string>
     <string name="todo">TODO</string>
     <string name="loginbtn">Log In</string>
     <string name="login_password">Password</string>
@@ -32,7 +32,7 @@
     <string name="todo9">TODO</string>
     <string name="medical_Btn">expand It</string>
     <string name="ortext">or</string>
-    <string name="Guest_login">I am a Guest !</string>
+    <string name="Guest_login"><u>am a Guest !</u> </string>
     <string name="title_activity_nerceries">Map</string>
     <string name="title_activity_nurseries">Map</string>
     <string name="title_activity_homepage">Homepage</string>
@@ -42,6 +42,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
 
 
 </resources>

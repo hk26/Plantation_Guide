@@ -8,6 +8,7 @@
 
     <ImageView
         android:id="@+id/imageView"
+        android:background="@color/creamy"
         android:layout_width="522dp"
         android:layout_height="179dp"
         android:contentDescription="@string/todo"
@@ -21,7 +22,7 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FFFFFF"
+        android:background="@color/creamy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,10 +32,17 @@
 
         <EditText
             android:id="@+id/editTextTextEmailAddress3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="232dp"
+            android:layout_height="45dp"
             android:layout_marginTop="140dp"
-            android:autofillHints=""
+            android:autofillHints="johndoe@gmail.com"
+
+            android:background="@drawable/custon_edittext_background"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableRight="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
+            android:padding="12dp"
+
             android:ems="10"
             android:hint="@string/login_email"
             android:inputType="textEmailAddress"
@@ -44,25 +52,36 @@
 
         <EditText
             android:id="@+id/editTextTextPassword2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="231dp"
+            android:layout_height="45dp"
             android:autofillHints=""
+
+            android:background="@drawable/custon_edittext_background"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawableRight="@drawable/ic_lock"
+            android:drawablePadding="5dp"
+
             android:ems="10"
             android:hint="@string/login_password"
             android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingTop="12dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
-            app:layout_constraintVertical_bias="0.018" />
+            app:layout_constraintVertical_bias="0.037" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="212dp"
+            android:layout_height="50dp"
             android:layout_marginTop="14dp"
-            android:background="#7AB643"
+            android:background="@color/darkfgreen"
             android:text="@string/loginbtn"
+            android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -77,6 +96,7 @@
             android:fontFamily="sans-serif"
             android:text="@string/login_here"
             android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="31sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
@@ -89,6 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot_password"
+            android:textColor="#000"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

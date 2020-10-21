@@ -41,14 +41,7 @@ public class SignupActivity extends AppCompatActivity {
             }
 
         });
-        Button start_button=(Button)findViewById(R.id.signupbtn);
-        start_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent sintent = new Intent(SignupActivity.this, nurseries.class);
-                startActivity(sintent);
-            }
-        });
+
 
 
 

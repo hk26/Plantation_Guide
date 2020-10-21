@@ -11,6 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/splash"
+        android:background="@color/creamy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,6 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/creamy"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         app:layout_constraintVertical_bias="0.0">
 
@@ -46,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/asklogin"
-            android:textColor="#7AB643"
+            android:textColor="@color/darkfgreen"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,8 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Guest_login"
-            android:textColor="#7AB643"
-
+            android:textColor="@color/darkfgreen"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -92,6 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/creamy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,6 +108,13 @@
             android:ems="11"
             android:hint="@string/sign_email"
             android:inputType="textEmailAddress"
+
+            android:background="@drawable/custon_edittext_background"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableRight="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -122,6 +131,13 @@
             android:ems="11"
             android:hint="@string/sign_password"
             android:inputType="textPassword"
+
+            android:background="@drawable/custon_edittext_background"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawableRight="@drawable/ic_lock"
+            android:drawablePadding="5dp"
+            android:padding="10dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -136,7 +152,9 @@
             android:layout_marginLeft="109dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="109dp"
-            android:background="#7AB643"
+            android:background="@color/darkfgreen"
+            android:textColor="#fff"
+            android:textSize="20sp"
             android:text="@string/Signupbtn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -156,11 +174,34 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
+
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:background="@drawable/custon_edittext_background"
+        android:drawableRight="@drawable/ic_baseline_person_24"
+        android:padding="10dp"
+        android:drawablePadding="5dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
         app:layout_constraintEnd_toEndOf="@+id/gifImageView"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/signup_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:text="Signup~Here"
+        android:drawableEnd="@drawable/ic_feather"
+        android:textColor="#045E1C"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

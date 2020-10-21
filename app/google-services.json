@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "10310478823",
+    "firebase_url": "https://plantation-guide-9d023.firebaseio.com",
+    "project_id": "plantation-guide-9d023",
+    "storage_bucket": "plantation-guide-9d023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10310478823:android:f61fab8038027f7b756b42",
+        "android_client_info": {
+          "package_name": "com.example.plantation_guide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10310478823-m3skk8e2s9agnoa4sgnlglsudgs9intm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABv2v0iFV_H2Pii5Ox-SfXxtecMdYmWaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10310478823-m3skk8e2s9agnoa4sgnlglsudgs9intm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
