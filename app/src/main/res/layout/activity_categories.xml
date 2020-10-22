@@ -34,6 +34,7 @@
 
         </LinearLayout>
 
+
         <TextView
             android:id="@+id/cate"
             android:layout_width="wrap_content"
@@ -45,6 +46,8 @@
             android:textColor="#3C3F41"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -68,6 +71,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/hang_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -86,6 +90,11 @@
 
 
         </RelativeLayout>
+
+
+
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -123,6 +132,7 @@
                 android:src="@drawable/indo3" />
 
             <Button
+                android:id="@+id/indo_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -134,6 +144,11 @@
 
 
         </RelativeLayout>
+
+
+
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -194,6 +209,13 @@
 
         </RelativeLayout>
 
+
+
+
+
+
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="210dp"
@@ -244,9 +266,6 @@
                 android:contentDescription="@string/todo"
                 android:src="@drawable/right" />
 
-
-
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -259,6 +278,15 @@
 
 
         </RelativeLayout>
+
+
+
+
+
+
+
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -299,8 +327,6 @@
                 android:layout_marginRight="26dp"
                 android:layout_marginBottom="-119dp"
                 android:src="@drawable/medi" />
-
-
         </RelativeLayout>
 
 
