@@ -1,6 +1,10 @@
 package com.example.plantation_guide;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,14 +13,21 @@ import android.os.Bundle;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class meditional_Plants extends AppCompatActivity {
+
+import com.example.plantation_guide.model;
+import com.example.plantation_guide.myadapter;
+
+
+public class indoor extends AppCompatActivity {
+
     RecyclerView recview;
     myadapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meditional_plants);
+        setContentView(R.layout.activity_indoor);
+
 
         recview = (RecyclerView) findViewById(R.id.indoorrecycleView);
         recview.setLayoutManager(new LinearLayoutManager(this));
@@ -29,6 +40,8 @@ public class meditional_Plants extends AppCompatActivity {
         adapter = new myadapter(options);
         recview.setAdapter(adapter);
     }
+
+
     @Override
     protected void onStart() {
         super.onStart();

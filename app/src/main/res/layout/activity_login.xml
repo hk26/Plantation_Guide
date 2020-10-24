@@ -32,7 +32,7 @@
 
         <EditText
             android:id="@+id/editTextTextEmailAddress3"
-            android:layout_width="232dp"
+            android:layout_width="231dp"
             android:layout_height="45dp"
             android:layout_marginTop="140dp"
             android:autofillHints="johndoe@gmail.com"
@@ -76,10 +76,10 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="212dp"
+            android:layout_width="231dp"
             android:layout_height="50dp"
             android:layout_marginTop="14dp"
-            android:background="@color/darkfgreen"
+            android:background="@drawable/round_corner"
             android:text="@string/loginbtn"
             android:textColor="#fff"
             app:layout_constraintBottom_toBottomOf="parent"

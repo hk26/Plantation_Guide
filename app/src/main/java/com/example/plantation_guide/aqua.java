@@ -9,26 +9,27 @@ import android.os.Bundle;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class meditional_Plants extends AppCompatActivity {
+public class aqua extends AppCompatActivity {
     RecyclerView recview;
     myadapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_meditional_plants);
+        setContentView(R.layout.activity_aqua);
 
-        recview = (RecyclerView) findViewById(R.id.indoorrecycleView);
+        recview=(RecyclerView)findViewById(R.id.hangrecycleView);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("indoor"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Data"), model.class)
                         .build();
 
-        adapter = new myadapter(options);
+        adapter=new myadapter(options);
         recview.setAdapter(adapter);
     }
+
     @Override
     protected void onStart() {
         super.onStart();

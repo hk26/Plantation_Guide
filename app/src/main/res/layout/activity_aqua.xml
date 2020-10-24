@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".meditional_Plants">
+    tools:context=".aqua">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/medirecycleView"
+        android:id="@+id/aquarecycleView"
         android:background="@color/creamy"
         />
     <TextView
         android:layout_width="299dp"
         android:layout_height="500dp"
-        android:text="medi Sucess!"
+        android:text="aQua Sucess!"
         android:textColor="@color/darkfgreen"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
