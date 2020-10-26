@@ -42,6 +42,15 @@ public class SignupActivity extends AppCompatActivity {
 
         });
 
+        Button button = (Button)findViewById(R.id.signupbtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignupActivity.this, NewsMain.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 

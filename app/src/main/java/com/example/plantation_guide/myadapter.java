@@ -26,6 +26,11 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
         holder.title.setText(model.getTitle());
         holder.details.setText(model.getDetails());
         Glide.with(holder.img.getContext()).load(model.getImage()).into(holder.img);
+        holder.sunlight.setText(model.getSunlight());
+        holder.water.setText(model.getWater());
+        holder.humadity.setText(model.getHumadity());
+        holder.temperature.setText(model.getTemperature());
+
 
 
     }
@@ -41,13 +46,25 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
     class myviewholder extends RecyclerView.ViewHolder
     {
         ImageView img;
-        TextView title,details;
+        TextView title,details,sunlight,water,humadity,temperature;
         public myviewholder(@NonNull View itemView)
         {
             super(itemView);
             img=(ImageView)itemView.findViewById(R.id.rimageview);
             title=(TextView)itemView.findViewById(R.id.rTitleView);
             details=(TextView)itemView.findViewById(R.id.details);
+
+           sunlight=(TextView)itemView.findViewById(R.id.details1);
+
+            water=(TextView)itemView.findViewById(R.id.details2);
+
+           humadity=(TextView)itemView.findViewById(R.id.details3);
+
+            temperature=(TextView)itemView.findViewById(R.id.details4);
+
+
+
+
         }
 
 
