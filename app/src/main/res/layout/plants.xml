@@ -209,7 +209,7 @@
                          android:text="details"
                          android:padding="10dp"
                          android:paddingRight="10dp"
-                         android:textAlignmen="gravity"
+                         android:textAlignment="gravity"
                          android:textColor="@color/darkfgreen"
                          android:textSize="12sp" />
                  </LinearLayout>
