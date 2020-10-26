@@ -18,12 +18,12 @@ public class meditional_Plants extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditional_plants);
 
-        recview = (RecyclerView) findViewById(R.id.indoorrecycleView);
+        recview = (RecyclerView) findViewById(R.id.medirecycleView);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("indoor"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("medi"), model.class)
                         .build();
 
         adapter = new myadapter(options);

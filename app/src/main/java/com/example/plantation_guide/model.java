@@ -2,20 +2,20 @@ package com.example.plantation_guide;
 
 
 public class model {
-    String title,image,details,sunlight,water,humadity,temperature;
+    String title,image,details,sunlight,water,humidity,temperature;
     model()
     {
 
     }
 
-    public model(String title, String image,String details,String sunlight,String water,String humadity,String temperature) {
+    public model(String title, String image,String details,String sunlight,String water,String humidity,String temperature) {
         this.title = title;
         this.image = image;
         this.details=details;
 
         this.sunlight=sunlight;
         this.water=water;
-        this.humadity=humadity;
+        this.humidity=humidity;
         this.temperature=temperature;
     }
 
@@ -51,8 +51,8 @@ public class model {
         return water;
     }
 
-    public String getHumadity() {
-        return humadity;
+    public String getHumidity() {
+        return humidity;
     }
 
     public String getTemperature() {
@@ -67,8 +67,8 @@ public class model {
         this.water = water;
     }
 
-    public void setHumadity(String humadity) {
-        this.humadity = humadity;
+    public void setHumidity(String humidity) {
+        this.humidity = humidity;
     }
 
     public void setTemperature(String temperature) {

@@ -34,7 +34,6 @@ public class Categories extends AppCompatActivity {
                 Intent intent = new Intent(Categories.this, home_page.class);
                 startActivity(intent);
                 onBackPressed();
-
             }
 
         });

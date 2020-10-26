@@ -18,12 +18,12 @@ public class aqua extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aqua);
 
-        recview=(RecyclerView)findViewById(R.id.hangrecycleView);
+        recview=(RecyclerView)findViewById(R.id.aquarecycleView);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Data"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("aqua"), model.class)
                         .build();
 
         adapter=new myadapter(options);

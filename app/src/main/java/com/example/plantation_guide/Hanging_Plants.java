@@ -28,7 +28,7 @@ public class Hanging_Plants extends AppCompatActivity {
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Data"), model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("hang"), model.class)
                         .build();
 
         adapter=new myadapter(options);
