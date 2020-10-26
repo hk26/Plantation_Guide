@@ -20,7 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".NewsMain" />
         <activity android:name=".indoor" />
         <activity android:name=".aqua" />
         <activity android:name=".garden" />

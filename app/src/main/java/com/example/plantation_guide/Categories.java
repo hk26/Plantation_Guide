@@ -21,6 +21,7 @@ public class Categories extends AppCompatActivity {
     RecyclerView recview;
     myadapter adapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

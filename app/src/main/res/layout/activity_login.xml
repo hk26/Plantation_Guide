@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress3"
+            android:id="@+id/login_email"
             android:layout_width="231dp"
             android:layout_height="45dp"
             android:layout_marginTop="140dp"
@@ -51,7 +51,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/login_password"
             android:layout_width="231dp"
             android:layout_height="45dp"
             android:autofillHints=""
@@ -71,13 +71,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
+            app:layout_constraintTop_toBottomOf="@+id/login_email"
             app:layout_constraintVertical_bias="0.037" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/login_button"
             android:layout_width="231dp"
-            android:layout_height="50dp"
+            android:layout_height="42dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/round_corner"
             android:text="@string/loginbtn"
@@ -86,7 +86,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
+            app:layout_constraintTop_toBottomOf="@+id/login_password"
             app:layout_constraintVertical_bias="0.028" />
 
         <TextView
@@ -99,7 +99,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="31sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
+            app:layout_constraintBottom_toTopOf="@+id/login_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -114,7 +114,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/login_button"
             app:layout_constraintVertical_bias="0.084" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
