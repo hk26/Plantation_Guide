@@ -25,6 +25,7 @@ public class SignupActivity extends AppCompatActivity {
     Button sbtn;
     private FirebaseAuth firebaseAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,7 @@ public class SignupActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+
                                         startActivity(new Intent(getApplicationContext(), login_Activity.class));
                                         Toast.makeText(SignupActivity.this, "User Confirmed", Toast.LENGTH_SHORT).show();
                                         finish();
